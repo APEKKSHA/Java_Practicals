@@ -1,7 +1,7 @@
 package JAVA_assignment_module_2;
 /*
  * W.A.J.P and create a class named 'Print Number' to print various numbers of different datatypes
- * by creating different methods with same name 'printn' having a parameter for each data type
+ * by creating different methods with same name 'printn' having a parameter for each data type.
  */
 
 class PrintNumber
