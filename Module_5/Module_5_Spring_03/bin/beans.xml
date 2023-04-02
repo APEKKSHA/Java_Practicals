@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+<!-- <bean id="custimpl" class="com.sp.CustomerImpl"></bean>
+<bean id="custowner" class="com.sp.CustomerOwner"></bean>
+<bean id="internetadvice" class="com.sp.InternetAdvice">
+	<property name="custowner" ref="custowner"></property>
+</bean>
+<bean id="customerproxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+	<property name="target">
+		<ref local="custimpl"/>
+	</property>
+	<property name="proxyInterfaces">
+		<value>com.sp.Customer</value>
+	</property>
+	<property name="interceptorNames">
+		<list>
+			<value>customerAdvisor</value>
+		</list>
+	</property>
+</bean>
+
+<bean id="customerAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+<property name="advice">
+	<ref local="internetadvice"/>
+</property>
+<property name=""></property>
+</bean> -->
+<bean id="custimpl" class="com.sp.CustomerImpl">
+</bean>
+<bean id="custowner" class="com.sp.CustomerOwner">
+</bean>
+<bean id="internetadvice" class="com.sp.InternetAdvice" >
+<property name="custowner" ref="custowner"></property>
+</bean>
+<bean id="customerproxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+<property name="target">
+<ref local="custimpl"/>
+</property>
+<property name="proxyInterfaces">
+<value>com.sp.Customer</value>
+</property>
+<property name="interceptorNames">
+<list>
+<value>customerAdvisor</value>
+</list>
+</property>
+</bean>
+<bean id="customerAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+ <property name="advice">
+  <ref local="internetadvice"/>
+  </property>
+  <property name="pattern">
+   <value>.*</value> 
+   </property> 
+ </bean>
+</beans>
