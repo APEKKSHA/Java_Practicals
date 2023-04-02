@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bean xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="s1" class="com.sp.Student">
+	<property name="sid" value="101"></property>
+	<property name="fname" value="Apeksha"></property>
+	<property name="lname" value="Patel"></property>
+	<property name="email" value="abc@gmail.com"></property>
+	<property name="mobile" value="9876543210"></property>
+	
+</bean>
+<bean>
+	<property name="lists">
+		<list>
+			<value>1</value>
+			<bean id="s2" class="com.sp.Student">
+				<property name="sid" value="102"></property> 
+				<property name="fname" value="Ram"></property>
+				<property name="lname" value="Shah"></property>
+				<property name="email" value="xyz@gmail.com"></property>
+				<property name="mobile" value="9876543987"></property>
+				
+			</bean>
+		
+		<value>2</value>
+			<beans id="s3" class="com.sp.Student">
+				<property name="sid" value="103"></property>
+				<property name="fname" value="Shyam"></property>
+				<property name="lname" value="Damodar"></property>
+				<property name="email" value="def@gmail.com"></property>
+				<property name="mobile" value="9812343987"></property>
+				
+			</beans>
+			<value>3</value>
+			<beans id="s4" class="com.sp.Student">
+				<property name="sid" value="104"></property>
+				<property name="fname" value="Ratan"></property>
+				<property name="lname" value="Tata"></property>
+				<property name="email" value="tata@gmail.com"></property>
+				<property name="mobile" value="9812343987"></property>
+				
+			</beans>
+			<value>4</value>
+			<beans id="s5" class="com.sp.Student">
+				<property name="sid" value="105"></property>
+				<property name="fname" value="Sunil"></property>
+				<property name="lname" value="Shetty"></property>
+				<property name="email" value="sunil@gmail.com"></property>
+				<property name="mobile" value="9812398987"></property>
+				
+			</beans>
+			<value>5</value>
+			<beans id="s6" class="com.sp.Student">
+				<property name="sid" value="106"></property>
+				<property name="fname" value="Ajay"></property>
+				<property name="lname" value="Devgan"></property>
+				<property name="email" value="ajay@gmail.com"></property>
+				<property name="mobile" value="9812343987"></property>
+				
+			</beans>
+		</list>
+ -->	</property>
+</bean>
+
+</bean>
